@@ -1,16 +1,21 @@
-lst = [3,2,5,9,8,4,6,7,12]
+lst = [3, 2, 5, 9, 8, 4, 6, 7, 12]
 
-divible_by_3 = []
-
-not_divible_by_3 = []
-
-
+remainder_1 = []
+remainder_2 = []
+remainder_3 = []
 
 for number in lst:
-    if number % 3 == 0:
-        divible_by_3.append(number)
+    r = number % 3
+    if r == 0:
+    
+        remainder_3.append(number)
     else:
-        not_divible_by_3.append(number)
-        
-print('divible_by_3:', divible_by_3)
-print('not_divible_by_3:', not_divible_by_3)
+    
+        if r == 1:
+            remainder_1.append(number)
+        else:  # r == 2
+            remainder_2.append(number)
+
+print('remainder_0:', remainder_3)
+print('remainder_1:', remainder_1)
+print('remainder_2:', remainder_2)
